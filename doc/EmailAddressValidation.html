@@ -129,7 +129,7 @@ href="http://tfletcher.com/lib/rfc822.rb">tfletcher.com/lib/rfc822.rb</a>
 Example:
 </p>
 <pre>
-  if EmailAddressPattern=~'foo@bar.com'
+  if EMAIL_ADDRESS_PATTERN=~'foo@bar.com'
     puts &quot;found&quot;
   else
     puts &quot;not found&quot;
@@ -144,18 +144,18 @@ result, which is the match&#8217;s string position:
 Example of match position:
 </p>
 <pre>
-  match_position = EmailAddressPattern=~'foo@bar.com'
+  match_position = EMAIL_ADDRESS_PATTERN=~'foo@bar.com'
   =&gt; 0
 
-  match_position = EmailAddressPattern=~'... foo@bar.com ...'
+  match_position = EMAIL_ADDRESS_PATTERN=~'... foo@bar.com ...'
   =&gt; 4
 
-  match_position = EmailAddressPattern=~'... hello world ...'
+  match_position = EMAIL_ADDRESS_PATTERN=~'... hello world ...'
   =&gt; nil
 </pre>
 <p>
 To do an exact pattern match, use the <a
-href="EmailAddressValidation.html#EmailAddressExactPattern">EmailAddressExactPattern</a>.
+href="EmailAddressValidation.html#EMAIL_ADDRESS_EXACT_PATTERN">EMAIL_ADDRESS_EXACT_PATTERN</a>.
 This matches the entire string from start to end; in other words, the
 entire string must be one email address.
 </p>
@@ -163,14 +163,14 @@ entire string must be one email address.
 Example of exact pattern match:
 </p>
 <pre>
-  if EmailAddressExactPattern=~'foo@bar.com'
+  if EMAIL_ADDRESS_EXACT_PATTERN=~'foo@bar.com'
     puts &quot;found&quot;
   else
     puts &quot;not found&quot;
   end
   =&gt; found
 
-  if EmailAddressExactPattern=~'... foo@bar.com ...'
+  if EMAIL_ADDRESS_EXACT_PATTERN=~'... foo@bar.com ...'
     puts &quot;found&quot;
   else
     puts &quot;not found&quot;
@@ -185,7 +185,7 @@ Example to validate an email address:
 </p>
 <pre>
   def valid?(email_address)
-    EmailAddressExactPattern=~email_address ? true : false
+    EMAIL_ADDRESS_EXACT_PATTERN=~email_address ? true : false
   end
 </pre>
 
@@ -197,72 +197,72 @@ Example to validate an email address:
 			<h3 class="section-header">Constants</h3>
 			<dl>
 			
-				<dt><a name="EmailAddressQText">EmailAddressQText</a></dt>
+				<dt><a name="EMAIL_ADDRESS_QTEXT">EMAIL_ADDRESS_QTEXT</a></dt>
 				
 				<dd class="description missing-docs">(Not documented)</dd>
 				
 			
-				<dt><a name="EmailAddressDText">EmailAddressDText</a></dt>
+				<dt><a name="EMAIL_ADDRESS_DTEXT">EMAIL_ADDRESS_DTEXT</a></dt>
 				
 				<dd class="description missing-docs">(Not documented)</dd>
 				
 			
-				<dt><a name="EmailAddressAtom">EmailAddressAtom</a></dt>
+				<dt><a name="EMAIL_ADDRESS_ATOM">EMAIL_ADDRESS_ATOM</a></dt>
 				
 				<dd class="description missing-docs">(Not documented)</dd>
 				
 			
-				<dt><a name="EmailAddressQuotedPair">EmailAddressQuotedPair</a></dt>
+				<dt><a name="EMAIL_ADDRESS_QUOTED_PAIR">EMAIL_ADDRESS_QUOTED_PAIR</a></dt>
 				
 				<dd class="description missing-docs">(Not documented)</dd>
 				
 			
-				<dt><a name="EmailAddressDomainLiteral">EmailAddressDomainLiteral</a></dt>
+				<dt><a name="EMAIL_ADDRESS_DOMAIN_LITERAL">EMAIL_ADDRESS_DOMAIN_LITERAL</a></dt>
 				
 				<dd class="description missing-docs">(Not documented)</dd>
 				
 			
-				<dt><a name="EmailAddressQuotedString">EmailAddressQuotedString</a></dt>
+				<dt><a name="EMAIL_ADDRESS_QUOTED_STRING">EMAIL_ADDRESS_QUOTED_STRING</a></dt>
 				
 				<dd class="description missing-docs">(Not documented)</dd>
 				
 			
-				<dt><a name="EmailAddressDomainRef">EmailAddressDomainRef</a></dt>
+				<dt><a name="EMAIL_ADDRESS_DOMAIN_REF">EMAIL_ADDRESS_DOMAIN_REF</a></dt>
 				
 				<dd class="description missing-docs">(Not documented)</dd>
 				
 			
-				<dt><a name="EmailAddressSubDomain">EmailAddressSubDomain</a></dt>
+				<dt><a name="EMAIL_ADDRESS_SUB_DOMAIN">EMAIL_ADDRESS_SUB_DOMAIN</a></dt>
 				
 				<dd class="description missing-docs">(Not documented)</dd>
 				
 			
-				<dt><a name="EmailAddressWord">EmailAddressWord</a></dt>
+				<dt><a name="EMAIL_ADDRESS_WORD">EMAIL_ADDRESS_WORD</a></dt>
 				
 				<dd class="description missing-docs">(Not documented)</dd>
 				
 			
-				<dt><a name="EmailAddressDomain">EmailAddressDomain</a></dt>
+				<dt><a name="EMAIL_ADDRESS_DOMAIN">EMAIL_ADDRESS_DOMAIN</a></dt>
 				
 				<dd class="description missing-docs">(Not documented)</dd>
 				
 			
-				<dt><a name="EmailAddressLocalPart">EmailAddressLocalPart</a></dt>
+				<dt><a name="EMAIL_ADDRESS_LOCAL_PART">EMAIL_ADDRESS_LOCAL_PART</a></dt>
 				
 				<dd class="description missing-docs">(Not documented)</dd>
 				
 			
-				<dt><a name="EmailAddressSpec">EmailAddressSpec</a></dt>
+				<dt><a name="EMAIL_ADDRESS_SPEC">EMAIL_ADDRESS_SPEC</a></dt>
 				
 				<dd class="description missing-docs">(Not documented)</dd>
 				
 			
-				<dt><a name="EmailAddressPattern">EmailAddressPattern</a></dt>
+				<dt><a name="EMAIL_ADDRESS_PATTERN">EMAIL_ADDRESS_PATTERN</a></dt>
 				
 				<dd class="description missing-docs">(Not documented)</dd>
 				
 			
-				<dt><a name="EmailAddressExactPattern">EmailAddressExactPattern</a></dt>
+				<dt><a name="EMAIL_ADDRESS_EXACT_PATTERN">EMAIL_ADDRESS_EXACT_PATTERN</a></dt>
 				
 				<dd class="description missing-docs">(Not documented)</dd>
 				

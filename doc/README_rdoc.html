@@ -95,7 +95,7 @@ href="http://tfletcher.com/lib/rfc822.rb">tfletcher.com/lib/rfc822.rb</a>
 Example:
 </p>
 <pre>
-  if EmailAddressPattern=~'foo@bar.com'
+  if EMAIL_ADDRESS_PATTERN=~'foo@bar.com'
     puts &quot;found&quot;
   else
     puts &quot;not found&quot;
@@ -110,17 +110,17 @@ result, which is the match&#8217;s string position:
 Example of match position:
 </p>
 <pre>
-  match_position = EmailAddressPattern=~'foo@bar.com'
+  match_position = EMAIL_ADDRESS_PATTERN=~'foo@bar.com'
   =&gt; 0
 
-  match_position = EmailAddressPattern=~'... foo@bar.com ...'
+  match_position = EMAIL_ADDRESS_PATTERN=~'... foo@bar.com ...'
   =&gt; 4
 
-  match_position = EmailAddressPattern=~'... hello world ...'
+  match_position = EMAIL_ADDRESS_PATTERN=~'... hello world ...'
   =&gt; nil
 </pre>
 <p>
-To do an exact pattern match, use the EmailAddressExactPattern. This
+To do an exact pattern match, use the EMAIL_ADDRESS_EXACT_PATTERN. This
 matches the entire string from start to end; in other words, the entire
 string must be one email address.
 </p>
@@ -128,14 +128,14 @@ string must be one email address.
 Example of exact pattern match:
 </p>
 <pre>
-  if EmailAddressExactPattern=~'foo@bar.com'
+  if EMAIL_ADDRESS_EXACT_PATTERN=~'foo@bar.com'
     puts &quot;found&quot;
   else
     puts &quot;not found&quot;
   end
   =&gt; found
 
-  if EmailAddressExactPattern=~'... foo@bar.com ...'
+  if EMAIL_ADDRESS_EXACT_PATTERN=~'... foo@bar.com ...'
     puts &quot;found&quot;
   else
     puts &quot;not found&quot;
@@ -150,7 +150,7 @@ Example to validate an email address:
 </p>
 <pre>
   def valid?(email_address)
-    EmailAddressExactPattern=~email_address ? true : false
+    EMAIL_ADDRESS_EXACT_PATTERN=~email_address ? true : false
   end
 </pre>
 
