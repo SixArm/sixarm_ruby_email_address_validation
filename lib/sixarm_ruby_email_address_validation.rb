@@ -1,64 +1,6 @@
 # -*- coding: utf-8 -*-
 =begin rdoc
-
-= SixArm » Ruby » Email address validation using RFC 822 pattern matching
-
-Author:: Joel Parker Henderson, joelparkerhenderson@gmail.com
-Copyright:: Copyright (c) 2006-2011 Joel Parker Henderson
-License:: See LICENSE.txt file           
-
-Email address regex, to validate an email address using RFC 822.
-
-This is a gem wrapper around http://tfletcher.com/lib/rfc822.rb
-
-@example 
-  if EMAIL_ADDRESS_PATTERN=~'foo@bar.com'
-    puts "found"
-  else
-    puts "not found"
-  end
-  => found
-
-To find an email address in a string, do the pattern match
-then use the result, which is the match's string position:
-
-@example of match position:
-  match_position = EMAIL_ADDRESS_PATTERN=~'foo@bar.com'
-  => 0
-
-  match_position = EMAIL_ADDRESS_PATTERN=~'... foo@bar.com ...'
-  => 4
-
-  match_position = EMAIL_ADDRESS_PATTERN=~'... hello world ...'
-  => nil
-
-
-To do an exact pattern match, use the EMAIL_ADDRESS_EXACT_PATTERN.
-This matches the entire string from start to end; in other words,
-the entire string must be one email address.
-
-@example of exact pattern match:
-  if EMAIL_ADDRESS_EXACT_PATTERN=~'foo@bar.com'
-    puts "found"
-  else
-    puts "not found"
-  end
-  => found
-
-  if EMAIL_ADDRESS_EXACT_PATTERN=~'... foo@bar.com ...'
-    puts "found"
-  else
-    puts "not found"
-  end
-  => not found
-
-The exact pattern is especialy useful to validate an email address.
-
-Example to validate an email address:
-  def valid?(email_address)
-    EMAIL_ADDRESS_EXACT_PATTERN=~email_address ? true : false
-  end
-
+Please see README.rdoc
 =end
 
 

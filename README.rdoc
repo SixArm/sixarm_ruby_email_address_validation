@@ -1,12 +1,10 @@
+= SixArm.com » Ruby » Email address validation using RFC 822 pattern matching
 
-= SixArm Ruby Gem: email address validation using RFC 822 pattern matching
+Author:: Joel Parker Henderson, joel@joelparkerhenderson.com
+Copyright:: Copyright (c) 2006-2011 Joel Parker Henderson
+License:: See LICENSE.txt file
 
-Author:: Joel Parker Henderson, joelparkerhenderson@gmail.com
-Copyright:: Copyright (c) 2006-2010 Joel Parker Henderson
-License:: CreativeCommons License, Non-commercial Share Alike
-License:: LGPL, GNU Lesser General Public License
-
-Email address regex, to validate an email address using RFC 822.
+Email address regular expression to validate an email address using RFC 822.
 
 This is a gem wrapper around http://tfletcher.com/lib/rfc822.rb
 
@@ -17,6 +15,9 @@ Example:
     puts "not found"
   end
   => found
+
+
+== Pattern Match
 
 To find an email address in a string, do the pattern match
 then use the result, which is the match's string position:
@@ -30,6 +31,9 @@ Example of match position:
 
   match_position = EMAIL_ADDRESS_PATTERN=~'... hello world ...'
   => nil
+
+
+== Exact Pattern Match
 
 To do an exact pattern match, use the EMAIL_ADDRESS_EXACT_PATTERN.
 This matches the entire string from start to end; in other words,
@@ -56,4 +60,16 @@ Example to validate an email address:
   def valid?(email_address)
     EMAIL_ADDRESS_EXACT_PATTERN=~email_address ? true : false
   end
+
+
+== Rails Validation
+
+To add email address validation to a typical Ruby On Rails model:
+
+  class User
+    include EmailAddressValidation
+    validates :email_address, :format => { :with => EMAIL_ADDRESS_EXACT_PATTERN },
+  end
+
+
 
