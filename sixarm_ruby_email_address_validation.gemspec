@@ -2,7 +2,7 @@ Gem::Specification.new do |s|
 
   s.name              = "sixarm_ruby_email_address_validation"
   s.summary           = "SixArm » Ruby » Email address validation using RFC 822 pattern match regex regular expressions"
-  s.version           = "1.2.2"
+  s.version           = "1.2.4"
 
   s.author            = "SixArm"
   s.email             = "sixarm@sixarm.com"

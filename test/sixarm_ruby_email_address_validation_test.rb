@@ -8,20 +8,20 @@ class Testing < Test::Unit::TestCase
 
  include EmailAddressValidation
 
- def test_pattern_success
-  assert_equal(0,EMAIL_ADDRESS_PATTERN=~'foo@bar.com')
+ def test_inner_pattern_success
+  assert_equal(0,EMAIL_ADDRESS_INNER_PATTERN=~'foo@bar.com')
  end
 
- def test_pattern_failure
-  assert_equal(nil,EMAIL_ADDRESS_PATTERN=~'foo')
+ def test_inner_pattern_failure
+  assert_equal(nil,EMAIL_ADDRESS_INNER_PATTERN=~'foo')
  end
 
- def test_pattern_chaff_success
-  assert_equal(4,EMAIL_ADDRESS_PATTERN=~'... foo@bar.com ...')
+ def test_inner_pattern_chaff_success
+  assert_equal(4,EMAIL_ADDRESS_INNER_PATTERN=~'... foo@bar.com ...')
  end
 
- def test_pattern_chaff_failure
-  assert_equal(nil,EMAIL_ADDRESS_PATTERN=~'... foo ...')
+ def test_inner_pattern_chaff_failure
+  assert_equal(nil,EMAIL_ADDRESS_INNER_PATTERN=~'... foo ...')
  end
 
  def test_exact_pattern_success
