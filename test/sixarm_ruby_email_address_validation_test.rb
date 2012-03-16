@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 require 'minitest/autorun'
-require 'sixarm_ruby_email_address_validation'
 require 'simplecov'
 SimpleCov.start
+require 'sixarm_ruby_email_address_validation'
 
 class Testing < Test::Unit::TestCase
 
