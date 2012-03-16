@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-require 'test/unit'
+require 'minitest/autorun'
 require 'sixarm_ruby_email_address_validation'
 require 'simplecov'
 SimpleCov.start
