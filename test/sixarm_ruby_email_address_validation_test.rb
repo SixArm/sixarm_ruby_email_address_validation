@@ -4,37 +4,59 @@ require 'simplecov'
 SimpleCov.start
 require 'sixarm_ruby_email_address_validation'
 
-class Testing < Test::Unit::TestCase
+describe EmailAddressValidation do
 
- include EmailAddressValidation
+  describe "pattern" do
 
- def test_inner_pattern_success
-  assert_equal(0,EMAIL_ADDRESS_INNER_PATTERN=~'foo@bar.com')
- end
+    describe "with typical" do
 
- def test_inner_pattern_failure
-  assert_equal(nil,EMAIL_ADDRESS_INNER_PATTERN=~'foo')
- end
+      it "success" do
+        (EmailAddressValidation::Pattern=~'foo@bar.com').must_equal 0
+      end
 
- def test_inner_pattern_chaff_success
-  assert_equal(4,EMAIL_ADDRESS_INNER_PATTERN=~'... foo@bar.com ...')
- end
+      it "failure" do
+        (EmailAddressValidation::Pattern=~'foo').must_equal nil
+      end
 
- def test_inner_pattern_chaff_failure
-  assert_equal(nil,EMAIL_ADDRESS_INNER_PATTERN=~'... foo ...')
- end
+      describe "with chaff" do
 
- def test_exact_pattern_success
-   assert_equal(0,EMAIL_ADDRESS_EXACT_PATTERN=~'foo@bar.com')
- end
+        it "success" do
+          (EmailAddressValidation::Pattern=~'... foo@bar.com ...').must_equal 4
+        end
 
- def test_exact_pattern_failure_due_to_left_chaff
-   assert_equal(nil,EMAIL_ADDRESS_EXACT_PATTERN=~'... foo@bar.com')
- end
+        it "failure" do
+          (EmailAddressValidation::Pattern=~'... foo ...').must_equal nil
+        end
 
- def test_exact_pattern_failure_due_to_right_chaff
-   assert_equal(nil,EMAIL_ADDRESS_EXACT_PATTERN=~'foo@bar.com ...')
- end
+      end
 
+    end
+
+  end
+
+  describe "pattern exact" do
+
+    describe "with typical" do
+
+      it "success" do
+        (EmailAddressValidation::PatternExact=~'foo@bar.com').must_equal 0
+      end
+
+    end
+
+    describe "with chaff" do
+
+      it "failure due to left chaff" do
+        (EmailAddressValidation::PatternExact=~'... foo@bar.com').must_equal nil
+      end
+
+      it "failure due to right chaff" do
+        (EmailAddressValidation::PatternExact=~'foo@bar.com ...').must_equal nil
+      end
+
+    end
+
+  end
+  
 end
 

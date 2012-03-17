@@ -24,19 +24,32 @@ Install:
 
 Bundler:
 
-    gem "sixarm_ruby_email_address_validation", "=1.2.4"
+    gem "sixarm_ruby_email_address_validation", "=2.0.0"
 
 Require:
 
     require "sixarm_ruby_email_address_validation"
 
 
+## High Security (Optional)
+
+To enable high security for all our gems:
+
+    wget http://sixarm.com/sixarm.pem
+    gem cert --add sixarm.pem
+    gem sources --add http://sixarm.com
+
+To install with high security:
+
+    gem install sixarm_ruby_email_address_validation --test --trust-policy HighSecurity
+
+
 ## Example
 
-    if EMAIL_ADDRESS_INNER_PATTERN=~"foo@bar.com"
-      puts "found" 
+    if EmailAddressValidation::Pattern=~"foo@bar.com"
+      puts "present" 
     else
-      puts "not found"
+      puts "absent"
     end
     => "found"
 
@@ -48,44 +61,44 @@ then use the result, which is the match's string position:
 
 Example of match position:
  
-    match_position = EMAIL_ADDRESS_INNER_PATTERN=~'foo@bar.com'
+    match_position = EmailAddressValidation::Pattern=~'foo@bar.com'
     => 0
 
-    match_position = EMAIL_ADDRESS_INNER_PATTERN=~'... foo@bar.com ...'
+    match_position = EmailAddressValidation::Pattern=~'... foo@bar.com ...'
     => 4
 
-    match_position = EMAIL_ADDRESS_INNER_PATTERN=~'... hello world ...'
+    match_position = EmailAddressValidation::Pattern=~'... hello world ...'
     => nil
 
 
-## Exact Pattern Match
+## Pattern Match Exact
 
-To do an exact pattern match, use the EMAIL_ADDRESS_EXACT_PATTERN.
-This matches the entire string from start to end; in other words,
-the entire string must be one email address.
+To do a pattern match to the entire string, use the EmailAddressValidation::PatternExact.
 
-Example of exact pattern match:
+The entire string must be one email address.
 
-    if EMAIL_ADDRESS_EXACT_PATTERN=~'foo@bar.com' 
-      puts "found" 
+Example of pattern match:
+
+    if EmailAddressValidation::PatternExact=~'foo@bar.com' 
+      puts "present" 
     else
-      puts "not found"
+      puts "absent"
     end
     => found
 
-    if EMAIL_ADDRESS_EXACT_PATTERN=~'... foo@bar.com ...' 
-      puts "found" 
+    if EmailAddressValidation::PatternExact=~'... foo@bar.com ...' 
+      puts "present" 
     else
-      puts "not found"
+      puts "absent"
     end
-    => not found
+    => absent
 
-The exact pattern is especialy useful to validate an email address.
+This pattern is especialy useful to validate an email address.
 
 Example to validate an email address:
 
     def valid?(email_address)
-      EMAIL_ADDRESS_EXACT_PATTERN=~email_address ? true : false
+      EmailAddressValidation::PatternExact=~email_address ? true : false
     end
 
 
@@ -95,8 +108,40 @@ To add email address validation to a typical Ruby On Rails model:
 
     class User
       include EmailAddressValidation
-      validates :email_address, :format => { :with => EMAIL_ADDRESS_EXACT_PATTERN },
+      validates :email_address, :format => { :with => EmailAddressValidation::PatternExact }
     end
 
 
+## Changes
 
+* 2012-03-17 2.0.0 Upgrade for Ruby 1.9.3, minitest/spec, improved docs, new API.
+* 2011-04-24 1.2.2 Upgrade for Ruby 1.9.2 and Rails 3.0.6
+
+
+## License
+
+You may choose any of these open source licenses:
+
+  * Apache License
+  * BSD License
+  * CreativeCommons License, Non-commercial Share Alike
+  * GNU General Public License Version 2 (GPL 2)
+  * GNU Lesser General Public License (LGPL)
+  * MIT License
+  * Perl Artistic License
+  * Ruby License
+
+The software is provided "as is", without warranty of any kind, 
+express or implied, including but not limited to the warranties of 
+merchantability, fitness for a particular purpose and noninfringement. 
+
+In no event shall the authors or copyright holders be liable for any 
+claim, damages or other liability, whether in an action of contract, 
+tort or otherwise, arising from, out of or in connection with the 
+software or the use or other dealings in the software.
+
+This license is for the included software that is created by SixArm;
+some of the included software may have its own licenses, copyrights, 
+authors, etc. and these do take precedence over the SixArm license.
+
+Copyright (c) 2005-2013 Joel Parker Henderson
