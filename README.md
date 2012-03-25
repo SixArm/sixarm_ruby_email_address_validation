@@ -1,6 +1,7 @@
 # SixArm.com » Ruby » <br> Email address validation using RFC 822 pattern matching
 
-* Docs: <http://sixarm.com/sixarm_ruby_email_address_validation/doc>
+* Doc: <http://sixarm.com/sixarm_ruby_email_address_validation/doc>
+* Gem: <http://rubygems.org/gems/sixarm_ruby_email_address_validation>
 * Repo: <http://github.com/sixarm/sixarm_ruby_email_address_validation>
 * Email: Joel Parker Henderson, <joel@sixarm.com>
 
