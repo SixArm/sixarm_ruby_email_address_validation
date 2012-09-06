@@ -32,19 +32,6 @@ Require:
     require "sixarm_ruby_email_address_validation"
 
 
-## Install with security (optional)
-
-To enable high security for all our gems:
-
-    wget http://sixarm.com/sixarm.pem
-    gem cert --add sixarm.pem
-    gem sources --add http://sixarm.com
-
-To install with high security:
-
-    gem install sixarm_ruby_email_address_validation --test --trust-policy HighSecurity
-
-
 ## Example
 
     if EmailAddressValidation::Pattern=~"foo@bar.com"
@@ -111,6 +98,21 @@ To add email address validation to a typical Ruby On Rails model:
       include EmailAddressValidation
       validates :email_address, :format => { :with => EmailAddressValidation::PatternExact }
     end
+
+
+## Frequently Asked Questions
+
+Q. Does this handle unusual email addresses, like foo+bar@my.com?
+
+A. Yes. It handles all RFC email addresses. If you find an RFC email address that fails, please let us know.
+
+Q. Why use this in a Rails app?
+
+A. We use it to detect a potential typo during user registration, so we can prompt the user to correct it before we send a typical welcome email with a registration link. If we didn't validate the email address format, then we would have sent the welcome email to the wrong user, or into the void.
+
+Q. Why use this to get more than one email address?
+
+A. We use it to find typos in large databases of email addresses where it's not a business option to send the user an email. For example, proofing an existing report of 10 million users in a CSV file. We need to contact anyone with a malformed email address, so we actually call them if we have their phone number. We can't send these people an email, because the address is invalid.
 
 
 ## Changes
