@@ -10,7 +10,9 @@
 
 Email address regular expression to validate an email address using RFC 822.
 
-This is a gem wrapper around http://tfletcher.com/lib/rfc822.rb
+The original PHP code is by Cal Henderson, see http://iamcal.com/publish/articles/php/parsing_email/
+
+Translated to Ruby by Tim Fletcher, with changes suggested by Dan Kubb, see http://tfletcher.com/lib/rfc822.rb
 
 For docs go to <http://sixarm.com/sixarm_ruby_email_address_validation/doc>
 
@@ -123,7 +125,12 @@ A. We use it to find typos in large databases of email addresses where it's not 
 
 ## License
 
-You may choose any of these open source licenses:
+This is based on code by Tim Fletcher which has this license:
+
+  * Licensed under a Creative Commons Attribution-ShareAlike 2.5 License
+  * http://creativecommons.org/licenses/by-sa/2.5/
+
+For the additional SixArm code, use any of these open source licenses:
 
   * Apache License
   * BSD License
