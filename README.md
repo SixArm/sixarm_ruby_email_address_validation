@@ -18,7 +18,12 @@ For docs go to <http://sixarm.com/sixarm_ruby_email_address_validation/doc>
 
 Want to help? We're happy to get pull requests.
 
+Related links:
 
+  * RFC 2822: http://tools.ietf.org/html/rfc2822
+  * Dominic Sayers is_email: http://isemail.info/
+  * Wikipedia email address: http://en.wikipedia.org/wiki/Email_address
+ 
 ## Install quickstart
 
 Install:
