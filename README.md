@@ -23,7 +23,10 @@ Related links:
   * RFC 2822: http://tools.ietf.org/html/rfc2822
   * Dominic Sayers is_email: http://isemail.info/
   * Wikipedia email address: http://en.wikipedia.org/wiki/Email_address
- 
+  * Email address validator with parsing expression grammar: https://github.com/larb/email_address_validator
+  * ActiveModel gem to delegate to Mail gem: https://github.com/codyrobbins/active-model-email-validator
+
+
 ## Install quickstart
 
 Install:
@@ -42,11 +45,8 @@ Require:
 ## Example
 
     if EmailAddressValidation::Pattern=~"foo@bar.com"
-      puts "present" 
-    else
-      puts "absent"
+       ...
     end
-    => "found"
 
 
 ## Pattern Match
@@ -56,13 +56,13 @@ then use the result, which is the match's string position:
 
 Example of match position:
  
-    match_position = EmailAddressValidation::Pattern=~'foo@bar.com'
+    EmailAddressValidation::Pattern=~'foo@bar.com'
     => 0
 
-    match_position = EmailAddressValidation::Pattern=~'... foo@bar.com ...'
+    EmailAddressValidation::Pattern=~'... foo@bar.com ...'
     => 4
 
-    match_position = EmailAddressValidation::Pattern=~'... hello world ...'
+    EmailAddressValidation::Pattern=~'... hello world ...'
     => nil
 
 
@@ -75,18 +75,10 @@ The entire string must be one email address.
 Example of pattern match:
 
     if EmailAddressValidation::PatternExact=~'foo@bar.com' 
-      puts "present" 
-    else
-      puts "absent"
-    end
-    => found
+    #=> truthy
 
     if EmailAddressValidation::PatternExact=~'... foo@bar.com ...' 
-      puts "present" 
-    else
-      puts "absent"
-    end
-    => absent
+    #=> falsey
 
 This pattern is especialy useful to validate an email address.
 
@@ -97,7 +89,7 @@ Example to validate an email address:
     end
 
 
-## Rails Validation
+## Rails Validation (optional)
 
 To add email address validation to a typical Ruby On Rails model:
 
