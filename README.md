@@ -1,4 +1,7 @@
-# Ruby » <br> Email address validation using RFC 822 pattern matching
+# SixArm.com » Ruby » <br> Email address validation using RFC 822 pattern matching
+
+[![Code Climate](https://codeclimate.com/github/SixArm/sixarm_ruby_email_address_validation.png)](https://codeclimate.com/github/SixArm/sixarm_ruby_email_address_validation)
+[![Build Status](https://travis-ci.org/SixArm/sixarm_ruby_email_address_validation.png)](https://travis-ci.org/SixArm/sixarm_ruby_email_address_validation)
 
 * Doc: <http://sixarm.com/sixarm_ruby_email_address_validation/doc>
 * Gem: <http://rubygems.org/gems/sixarm_ruby_email_address_validation>
@@ -35,11 +38,24 @@ Install:
 
 Bundler:
 
-    gem "sixarm_ruby_email_address_validation", "~>2.0.0"
+    gem "sixarm_ruby_email_address_validation", ">=2.0.1", "<2"
 
 Require:
 
     require "sixarm_ruby_email_address_validation"
+
+
+## Install with security (optional)
+
+To enable high security for all our gems:
+
+    wget http://sixarm.com/sixarm.pem
+    gem cert --add sixarm.pem
+    gem sources --add http://sixarm.com
+
+To install with high security:
+
+    gem install sixarm_ruby_email_address_validation --trust-policy HighSecurity
 
 
 ## Example
@@ -55,7 +71,7 @@ To find an email address in a string, do the pattern match
 then use the result, which is the match's string position:
 
 Example of match position:
- 
+
     EmailAddressValidation::Pattern=~'foo@bar.com'
     => 0
 
@@ -74,10 +90,10 @@ The entire string must be one email address.
 
 Example of pattern match:
 
-    if EmailAddressValidation::PatternExact=~'foo@bar.com' 
+    if EmailAddressValidation::PatternExact=~'foo@bar.com'
     #=> truthy
 
-    if EmailAddressValidation::PatternExact=~'... foo@bar.com ...' 
+    if EmailAddressValidation::PatternExact=~'... foo@bar.com ...'
     #=> falsey
 
 This pattern is especialy useful to validate an email address.
