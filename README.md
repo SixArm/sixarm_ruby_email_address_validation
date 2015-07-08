@@ -1,4 +1,4 @@
-# SixArm.com » Ruby » <br> Email address validation using RFC 822 pattern matching
+# SixArm.com » Ruby » <br> Email address validation using RFC 822
 
 [![Code Climate](https://codeclimate.com/github/SixArm/sixarm_ruby_email_address_validation.png)](https://codeclimate.com/github/SixArm/sixarm_ruby_email_address_validation)
 [![Build Status](https://travis-ci.org/SixArm/sixarm_ruby_email_address_validation.png)](https://travis-ci.org/SixArm/sixarm_ruby_email_address_validation)
