@@ -1,12 +1,19 @@
 # SixArm.com » Ruby » <br> Email address validation using RFC 822
 
+<!--HEADER-OPEN-->
+
 [![Code Climate](https://codeclimate.com/github/SixArm/sixarm_ruby_email_address_validation.png)](https://codeclimate.com/github/SixArm/sixarm_ruby_email_address_validation)
 [![Build Status](https://travis-ci.org/SixArm/sixarm_ruby_email_address_validation.png)](https://travis-ci.org/SixArm/sixarm_ruby_email_address_validation)
 
+* Git: <https://github.com/sixarm/sixarm_ruby_email_address_validation>
 * Doc: <http://sixarm.com/sixarm_ruby_email_address_validation/doc>
-* Gem: <http://rubygems.org/gems/sixarm_ruby_email_address_validation>
-* Repo: <http://github.com/sixarm/sixarm_ruby_email_address_validation>
-* Email: Joel Parker Henderson, <joel@sixarm.com>
+* Gem: <https://rubygems.org/gems/sixarm_ruby_email_address_validation>
+* Contact: Joel Parker Henderson, <joel@sixarm.com>
+* Changes: See CHANGES.md file.
+* License: See LICENSE.md file.
+* Helping: See CONTRIBUTING.md file.
+
+<!--HEADER-SHUT-->
 
 
 ## Introduction
@@ -30,32 +37,29 @@ Related links:
   * ActiveModel gem to delegate to Mail gem: https://github.com/codyrobbins/active-model-email-validator
 
 
-## Install quickstart
+<!--INSTALL-OPEN-->
 
-Install:
+## Install
 
-    gem install sixarm_ruby_email_address_validation
+To install using a Gemfile, add this:
 
-Bundler:
+    gem "sixarm_ruby_email_address_validation", ">= 2.0.1, < 3"
 
-    gem "sixarm_ruby_email_address_validation", ">=2.0.1", "<2"
+To install using the command line, run this:
 
-Require:
+    gem install sixarm_ruby_email_address_validation -v ">= 2.0.1, < 3"
+
+To install using the command with high security, run this:
+
+    wget http://sixarm.com/sixarm.pem
+    gem cert --add sixarm.pem && gem sources --add http://sixarm.com
+    gem install sixarm_ruby_email_address_validation -v ">= 2.0.1, < 3" --trust-policy HighSecurity
+
+To require the gem in your code:
 
     require "sixarm_ruby_email_address_validation"
 
-
-## Install with security (optional)
-
-To enable high security for all our gems:
-
-    wget http://sixarm.com/sixarm.pem
-    gem cert --add sixarm.pem
-    gem sources --add http://sixarm.com
-
-To install with high security:
-
-    gem install sixarm_ruby_email_address_validation --trust-policy HighSecurity
+<!--INSTALL-SHUT-->
 
 
 ## Example
