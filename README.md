@@ -43,13 +43,13 @@ Related links:
 
 To install using a Gemfile, add this:
 
-    gem "sixarm_ruby_email_address_validation", ">= 2.0.1, < 3"
+    gem "sixarm_ruby_email_address_validation", ">= 2.0.1", "< 3"
 
 To install using the command line, run this:
 
     gem install sixarm_ruby_email_address_validation -v ">= 2.0.1, < 3"
 
-To install using the command with high security, run this:
+To install using the command line with high security, run this:
 
     wget http://sixarm.com/sixarm.pem
     gem cert --add sixarm.pem && gem sources --add http://sixarm.com
