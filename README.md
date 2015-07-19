@@ -64,56 +64,68 @@ To require the gem in your code:
 <!--INSTALL-SHUT-->
 
 
-## Example
+## Pattern
 
-    if EmailAddressValidation::Pattern=~"foo@bar.com"
-       ...
-    end
+To find an email address, anywhere in a string, use the `Pattern` constant.
 
+  * If a match is anywhere in the string, then return the character position index.
+  * If there's no match, then return nil.
 
-## Pattern Match
+Example:
 
-To find an email address in a string, do the pattern match
-then use the result, which is the match's string position:
-
-Example of match position:
-
-    EmailAddressValidation::Pattern=~'foo@bar.com'
+    EmailAddressValidation::Pattern =~ "alice@example.com"
     => 0
 
-    EmailAddressValidation::Pattern=~'... foo@bar.com ...'
+    EmailAddressValidation::Pattern =~ "--- alice@example.com ---"
     => 4
 
-    EmailAddressValidation::Pattern=~'... hello world ...'
-    => nil
+
+## Pattern Exact
+
+To find an email address, and ensure that it is the entire string, use the `PatternExact` constant.
+
+  * If a match is the entire string, then return the character position index, which is always 0.
+  * Otherwise return nil.
+  
+Example:
+
+    EmailAddressValidation::PatternExact =~ "alice@example.com'
+    #=> 0
+
+    EmailAddressValidation::PatternExact =~ "--- alice@example.com ---"
+    #=> nil
 
 
-## Pattern Match Exact
+## Examples
 
-To do a pattern match to the entire string, use the EmailAddressValidation::PatternExact.
+The patterns are easy to use in your own code.
 
-The entire string must be one email address.
+Example of a condition:
 
-Example of pattern match:
+    text = "alice@example.com"
+    if EmailAddressValidation::PatternExact =~ text
+	  puts "valid"
+	else
+	  puts "invalid"
+	end
+	  
+Example of a method:
 
-    if EmailAddressValidation::PatternExact=~'foo@bar.com'
-    #=> truthy
-
-    if EmailAddressValidation::PatternExact=~'... foo@bar.com ...'
-    #=> falsey
-
-This pattern is especialy useful to validate an email address.
-
-Example to validate an email address:
-
-    def valid?(email_address)
-      EmailAddressValidation::PatternExact=~email_address ? true : false
+    def valid?(text)
+      EmailAddressValidation::PatternExact =~ text ? true : false
     end
 
+    valid?("alice@example.com") #=> true
+    valid?("alice") #=> false
+	
+Example of a scan:
 
-## Rails Validation (optional)
+    text = "To alice@example.com and bob@example.org and others"
+    text.scan(EmailAddressValidation::Pattern)
+    #=> ["alice@example.com", "bob@example.org"]
 
-To add email address validation to a typical Ruby On Rails model:
+
+Example of a Rails user class:
 
     class User
       include EmailAddressValidation
