@@ -118,12 +118,21 @@ Example of a method:
     valid?("alice@example.com") #=> true
     valid?("alice") #=> false
 	
-Example of a scan:
-
+Example of a scan which gets all the email adddresses:
+	
     text = "To alice@example.com and bob@example.org and others"
     text.scan(EmailAddressValidation::Pattern)
     #=> ["alice@example.com", "bob@example.org"]
 
+Example of a scan which iterates on each email address:
+
+    text = "To alice@example.com and bob@example.org and others"
+    text.scan(EmailAddressValidation::Pattern) do |match|
+	  puts match
+	end
+    #=>
+	alice@example.com
+	bob@example.org
 
 Example of a Rails user class:
 
