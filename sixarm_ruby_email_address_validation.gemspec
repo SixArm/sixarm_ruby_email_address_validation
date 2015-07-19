@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name           = "sixarm_ruby_email_address_validation"
   s.summary        = "SixArm.com » Ruby » Email address validation using RFC 822"
   s.description    = "Email address validation using RFC 822 pattern matching regular expressions"
-  s.version        = "2.0.1"
+  s.version        = "2.0.2"
 
   s.author         = "SixArm"
   s.email          = "sixarm@sixarm.com"
@@ -22,10 +22,12 @@ Gem::Specification.new do |s|
   s.files = [
     "Rakefile",
     "lib/sixarm_ruby_email_address_validation.rb",
+    "lib/sixarm_ruby_email_address_validation/email_address_validation.rb",
   ]
 
   s.test_files = [
-    "test/sixarm_ruby_email_address_validation_test.rb"
+    "test/sixarm_ruby_email_address_validation_test.rb",
+    "test/sixarm_ruby_email_address_validation_test/email_address_validation_test.rb"    
   ]
 
   s.add_development_dependency('minitest', '>= 5.7.0', '< 6')
