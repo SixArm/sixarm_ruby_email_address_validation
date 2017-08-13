@@ -3,7 +3,7 @@
 Gem::Specification.new do |s|
 
   s.name           = "sixarm_ruby_email_address_validation"
-  s.summary        = "SixArm.com » Ruby » Email address validation using RFC 822"
+  s.summary        = "SixArm.com → Ruby → Email address validation using RFC 822"
   s.description    = "Email address validation using RFC 822 pattern matching regular expressions"
   s.version        = "2.0.2"
 
