@@ -8,21 +8,25 @@ describe EmailAddressValidation do
     describe "with typical" do
 
       it "success" do
-        (EmailAddressValidation::Pattern=~'foo@bar.com').must_equal 0
+        (EmailAddressValidation::Pattern =~ "alice@example.com").must_equal 0
       end
 
       it "failure" do
-        (EmailAddressValidation::Pattern=~'foo').must_equal nil
+        (EmailAddressValidation::Pattern =~ "alice").must_equal nil
       end
 
       describe "with chaff" do
 
-        it "success" do
-          (EmailAddressValidation::Pattern=~'... foo@bar.com ...').must_equal 4
+        it "success with left chaff" do
+          (EmailAddressValidation::Pattern= ~ "... alice@example.com").must_equal 4
         end
 
-        it "failure" do
-          (EmailAddressValidation::Pattern=~'... foo ...').must_equal nil
+        it "success with right chaff" do
+          (EmailAddressValidation::Pattern= ~ "alice@example.com ...").must_equal 0
+        end        
+
+        it "failure due to no email address" do
+          (EmailAddressValidation::Pattern =~ "... alice ...").must_equal nil
         end
 
       end
@@ -36,7 +40,7 @@ describe EmailAddressValidation do
     describe "with typical" do
 
       it "success" do
-        (EmailAddressValidation::PatternExact=~'foo@bar.com').must_equal 0
+        (EmailAddressValidation::PatternExact =~ "alice@example.com").must_equal 0
       end
 
     end
@@ -44,13 +48,17 @@ describe EmailAddressValidation do
     describe "with chaff" do
 
       it "failure due to left chaff" do
-        (EmailAddressValidation::PatternExact=~'... foo@bar.com').must_equal nil
+        (EmailAddressValidation::PatternExact =~ "... alice@example.com").must_equal nil
       end
 
       it "failure due to right chaff" do
-        (EmailAddressValidation::PatternExact=~'foo@bar.com ...').must_equal nil
+        (EmailAddressValidation::PatternExact =~ "alice@example.com ...").must_equal nil
       end
 
+      it "failure due to no email address" do
+        (EmailAddressValidation::PatternExact =~ "... alice ...").must_equal nil
+      end
+              
     end
 
   end
