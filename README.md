@@ -1,6 +1,6 @@
 # SixArm.com » Ruby » <br> Email address validation using RFC 822
 
-<!--HEADER-OPEN-->
+<!--header-open-->
 
 [![Gem Version](https://badge.fury.io/rb/sixarm_ruby_email_address_validation.svg)](http://badge.fury.io/rb/sixarm_ruby_email_address_validation)
 [![Build Status](https://travis-ci.org/SixArm/sixarm_ruby_email_address_validation.png)](https://travis-ci.org/SixArm/sixarm_ruby_email_address_validation)
@@ -15,7 +15,7 @@
 * License: See LICENSE.md file.
 * Helping: See CONTRIBUTING.md file.
 
-<!--HEADER-SHUT-->
+<!--header-shut-->
 
 
 ## Introduction
@@ -39,7 +39,7 @@ Related links:
   * ActiveModel gem to delegate to Mail gem: https://github.com/codyrobbins/active-model-email-validator
 
 
-<!--INSTALL-OPEN-->
+<!--install-opent-->
 
 ## Install
 
@@ -61,7 +61,7 @@ To require the gem in your code:
 
     require "sixarm_ruby_email_address_validation"
 
-<!--INSTALL-SHUT-->
+<!--install-shut-->
 
 
 ## Pattern
