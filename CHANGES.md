@@ -1,5 +1,6 @@
 # Changes
 
+* 2018-06-22 3.0.0 Update to Ruby 2.5, testing gems, etc.
 * 2015-07-18 2.0.2 Improve quality assurance
 * 2015-07-07 2.0.1 Update gemspec to use file manifest
 * 2012-03-17 2.0.0 Upgrade for Ruby 1.9.3, minitest/spec, improved docs, new API

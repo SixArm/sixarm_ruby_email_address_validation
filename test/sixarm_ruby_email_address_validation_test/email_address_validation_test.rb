@@ -8,25 +8,25 @@ describe EmailAddressValidation do
     describe "with typical" do
 
       it "success" do
-        (EmailAddressValidation::Pattern =~ "alice@example.com").must_equal 0
+        expect(EmailAddressValidation::Pattern =~ "alice@example.com").must_equal 0
       end
 
       it "failure" do
-        (EmailAddressValidation::Pattern =~ "alice").must_equal nil
+        expect(EmailAddressValidation::Pattern =~ "alice").must_be_nil
       end
 
       describe "with chaff" do
 
         it "success with left chaff" do
-          (EmailAddressValidation::Pattern= ~ "... alice@example.com").must_equal 4
+          expect(EmailAddressValidation::Pattern =~ "... alice@example.com").must_equal 4
         end
 
         it "success with right chaff" do
-          (EmailAddressValidation::Pattern= ~ "alice@example.com ...").must_equal 0
+          expect(EmailAddressValidation::Pattern =~ "alice@example.com ...").must_equal 0
         end        
 
         it "failure due to no email address" do
-          (EmailAddressValidation::Pattern =~ "... alice ...").must_equal nil
+          expect(EmailAddressValidation::Pattern =~ "... alice ...").must_be_nil
         end
 
       end
@@ -40,7 +40,7 @@ describe EmailAddressValidation do
     describe "with typical" do
 
       it "success" do
-        (EmailAddressValidation::PatternExact =~ "alice@example.com").must_equal 0
+        expect(EmailAddressValidation::PatternExact =~ "alice@example.com").must_equal 0
       end
 
     end
@@ -48,15 +48,15 @@ describe EmailAddressValidation do
     describe "with chaff" do
 
       it "failure due to left chaff" do
-        (EmailAddressValidation::PatternExact =~ "... alice@example.com").must_equal nil
+        expect(EmailAddressValidation::PatternExact =~ "... alice@example.com").must_be_nil
       end
 
       it "failure due to right chaff" do
-        (EmailAddressValidation::PatternExact =~ "alice@example.com ...").must_equal nil
+        expect(EmailAddressValidation::PatternExact =~ "alice@example.com ...").must_be_nil
       end
 
       it "failure due to no email address" do
-        (EmailAddressValidation::PatternExact =~ "... alice ...").must_equal nil
+        expect(EmailAddressValidation::PatternExact =~ "... alice ...").must_be_nil
       end
               
     end

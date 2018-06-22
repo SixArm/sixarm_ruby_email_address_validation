@@ -1,23 +1,20 @@
-# SixArm.com » Ruby » <br> Email address validation using RFC 822
+# SixArm.com → Ruby → <br> Email address validation using RFC 822
 
 <!--header-open-->
 
 [![Gem Version](https://badge.fury.io/rb/sixarm_ruby_email_address_validation.svg)](http://badge.fury.io/rb/sixarm_ruby_email_address_validation)
 [![Build Status](https://travis-ci.org/SixArm/sixarm_ruby_email_address_validation.png)](https://travis-ci.org/SixArm/sixarm_ruby_email_address_validation)
 [![Code Climate Maintainability](https://api.codeclimate.com/v1/badges/b5b279e640b3fcdb881d/maintainability)](https://codeclimate.com/github/SixArm/sixarm_ruby_email_address_validation/maintainability)
-[![Coverage Status](https://coveralls.io/repos/SixArm/sixarm_ruby_email_address_validation/badge.svg?branch=master&service=github)](https://coveralls.io/github/SixArm/sixarm_ruby_email_address_validation?branch=master)
 
 * Git: <https://github.com/sixarm/sixarm_ruby_email_address_validation>
 * Doc: <http://sixarm.com/sixarm_ruby_email_address_validation/doc>
 * Gem: <https://rubygems.org/gems/sixarm_ruby_email_address_validation>
 * Contact: Joel Parker Henderson, <joel@sixarm.com>
-* Changes: See CHANGES.md file.
-* License: See LICENSE.md file.
-* Helping: See CONTRIBUTING.md file.
+* Project: [changes](CHANGES.md), [license](LICENSE.md), [contributing](CONTRIBUTING.md).
 
 <!--header-shut-->
 
-
+w
 ## Introduction
 
 Email address regular expression to validate an email address using RFC 822.
@@ -39,7 +36,7 @@ Related links:
   * ActiveModel gem to delegate to Mail gem: https://github.com/codyrobbins/active-model-email-validator
 
 
-<!--install-opent-->
+<!--install-open-->
 
 ## Install
 
