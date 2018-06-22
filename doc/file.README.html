@@ -1,12 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   File: README
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; Documentation by YARD 0.9.14
   
 </title>
 
@@ -15,9 +15,8 @@
   <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
+  pathId = "README";
   relpath = '';
-  framesUrl = "frames.html#!file.README.html";
 </script>
 
 
@@ -28,108 +27,81 @@
 
   </head>
   <body>
-    <div id="header">
-      <div id="menu">
+    <div class="nav_wrap">
+      <iframe id="nav" src="file_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
   
     <a href="_index.html">Index</a> &raquo; 
     <span class="title">File: README</span>
   
-
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-      <div id="search">
+        <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="file_list.html">
-      File List
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
     </a>
   
 </div>
-      <div class="clear"></div>
-    </div>
+        <div class="clear"></div>
+      </div>
 
-    <iframe id="search_frame"></iframe>
+      <div id="content"><div id='filecontents'><h1>SixArm.com → Ruby → <br> Email address validation using RFC 822</h1>
 
-    <div id="content"><div id='filecontents'>
-<h1 id="label-SixArm.com+-C2-BB+Ruby+-C2-BB++Email+address+validation+using+RFC+822">SixArm.com » Ruby » <br> Email address validation using RFC 822</h1>
-<!--HEADER-OPEN-->
-<p><a href="http://badge.fury.io/rb/sixarm_ruby_email_address_validation"><img
-src="https://badge.fury.io/rb/sixarm_ruby_email_address_validation.svg"></a>
-<a
-href="https://travis-ci.org/SixArm/sixarm_ruby_email_address_validation"><img
-src="https://travis-ci.org/SixArm/sixarm_ruby_email_address_validation.png"></a>
-<a
-href="https://codeclimate.com/github/SixArm/sixarm_ruby_email_address_validation"><img
-src="https://codeclimate.com/github/SixArm/sixarm_ruby_email_address_validation.png"></a>
-<a
-href="https://coveralls.io/github/SixArm/sixarm_ruby_email_address_validation?branch=master"><img
-src="https://coveralls.io/repos/SixArm/sixarm_ruby_email_address_validation/badge.svg?branch=master&service=github"></a></p>
-<ul><li>
-<p>Git: <a
-href="https://github.com/sixarm/sixarm_ruby_email_address_validation">github.com/sixarm/sixarm_ruby_email_address_validation</a></p>
-</li><li>
-<p>Doc: <a
-href="http://sixarm.com/sixarm_ruby_email_address_validation/doc">sixarm.com/sixarm_ruby_email_address_validation/doc</a></p>
-</li><li>
-<p>Gem: <a
-href="https://rubygems.org/gems/sixarm_ruby_email_address_validation">rubygems.org/gems/sixarm_ruby_email_address_validation</a></p>
-</li><li>
-<p>Contact: Joel Parker Henderson, <a
-href="mailto:joel@sixarm.com">joel@sixarm.com</a></p>
-</li><li>
-<p>Changes: See CHANGES.md file.</p>
-</li><li>
-<p>License: See LICENSE.md file.</p>
-</li><li>
-<p>Helping: See CONTRIBUTING.md file.</p>
-</li></ul>
-<!--HEADER-SHUT-->
-<h2 id="label-Introduction">Introduction</h2>
+<!--header-open-->
 
-<p>Email address regular expression to validate an email address using RFC
-822.</p>
+<p><a href="http://badge.fury.io/rb/sixarm_ruby_email_address_validation"><img src="https://badge.fury.io/rb/sixarm_ruby_email_address_validation.svg" alt="Gem Version"></a>
+<a href="https://travis-ci.org/SixArm/sixarm_ruby_email_address_validation"><img src="https://travis-ci.org/SixArm/sixarm_ruby_email_address_validation.png" alt="Build Status"></a>
+<a href="https://codeclimate.com/github/SixArm/sixarm_ruby_email_address_validation/maintainability"><img src="https://api.codeclimate.com/v1/badges/b5b279e640b3fcdb881d/maintainability" alt="Code Climate Maintainability"></a></p>
 
-<p>The original PHP code is by Cal Henderson, see <a
-href="http://iamcal.com/publish/articles/php/parsing_email">iamcal.com/publish/articles/php/parsing_email</a>/</p>
+<ul>
+<li>Git: <a href="https://github.com/sixarm/sixarm_ruby_email_address_validation">https://github.com/sixarm/sixarm_ruby_email_address_validation</a></li>
+<li>Doc: <a href="http://sixarm.com/sixarm_ruby_email_address_validation/doc">http://sixarm.com/sixarm_ruby_email_address_validation/doc</a></li>
+<li>Gem: <a href="https://rubygems.org/gems/sixarm_ruby_email_address_validation">https://rubygems.org/gems/sixarm_ruby_email_address_validation</a></li>
+<li>Contact: Joel Parker Henderson, <a href="mailto:joel@sixarm.com">joel@sixarm.com</a></li>
+<li>Project: <a href="CHANGES.md">changes</a>, <a href="LICENSE.md">license</a>, <a href="CONTRIBUTING.md">contributing</a>.</li>
+</ul>
 
-<p>Translated to Ruby by Tim Fletcher, with changes suggested by Dan Kubb, see
-<a
-href="http://tfletcher.com/lib/rfc822.rb">tfletcher.com/lib/rfc822.rb</a></p>
+<!--header-shut-->
 
-<p>For docs go to <a
-href="http://sixarm.com/sixarm_ruby_email_address_validation/doc">sixarm.com/sixarm_ruby_email_address_validation/doc</a></p>
+<p>w</p>
+
+<h2>Introduction</h2>
+
+<p>Email address regular expression to validate an email address using RFC 822.</p>
+
+<p>The original PHP code is by Cal Henderson, see <a href="http://iamcal.com/publish/articles/php/parsing_email/">http://iamcal.com/publish/articles/php/parsing_email/</a></p>
+
+<p>Translated to Ruby by Tim Fletcher, with changes suggested by Dan Kubb, see <a href="http://tfletcher.com/lib/rfc822.rb">http://tfletcher.com/lib/rfc822.rb</a></p>
+
+<p>For docs go to <a href="http://sixarm.com/sixarm_ruby_email_address_validation/doc">http://sixarm.com/sixarm_ruby_email_address_validation/doc</a></p>
 
 <p>Want to help? We&#39;re happy to get pull requests.</p>
 
 <p>Related links:</p>
-<ul><li>
-<p>RFC 2822: <a
-href="http://tools.ietf.org/html/rfc2822">tools.ietf.org/html/rfc2822</a></p>
-</li><li>
-<p>Dominic Sayers is_email: <a href="http://isemail.info">isemail.info</a>/</p>
-</li><li>
-<p>Wikipedia email address: <a
-href="http://en.wikipedia.org/wiki/Email_address">en.wikipedia.org/wiki/Email_address</a></p>
-</li><li>
-<p>Email address validator with parsing expression grammar: <a
-href="https://github.com/larb/email_address_validator">github.com/larb/email_address_validator</a></p>
-</li><li>
-<p>ActiveModel gem to delegate to Mail gem: <a
-href="https://github.com/codyrobbins/active-model-email-validator">github.com/codyrobbins/active-model-email-validator</a></p>
-</li></ul>
-<!--INSTALL-OPEN-->
-<h2 id="label-Install">Install</h2>
+
+<ul>
+<li>RFC 2822: <a href="http://tools.ietf.org/html/rfc2822">http://tools.ietf.org/html/rfc2822</a></li>
+<li>Dominic Sayers is_email: <a href="http://isemail.info/">http://isemail.info/</a></li>
+<li>Wikipedia email address: <a href="http://en.wikipedia.org/wiki/Email_address">http://en.wikipedia.org/wiki/Email_address</a></li>
+<li>Email address validator with parsing expression grammar: <a href="https://github.com/larb/email_address_validator">https://github.com/larb/email_address_validator</a></li>
+<li>ActiveModel gem to delegate to Mail gem: <a href="https://github.com/codyrobbins/active-model-email-validator">https://github.com/codyrobbins/active-model-email-validator</a></li>
+</ul>
+
+<!--install-open-->
+
+<h2>Install</h2>
 
 <p>To install using a Gemfile, add this:</p>
 
@@ -138,104 +110,130 @@ href="https://github.com/codyrobbins/active-model-email-validator">github.com/co
 
 <p>To install using the command line, run this:</p>
 
-<pre class="code ruby"><code class="ruby">gem install sixarm_ruby_email_address_validation -v &quot;&gt;= 2.0.2, &lt; 3&quot;</code></pre>
+<pre class="code ruby"><code class="ruby">gem install sixarm_ruby_email_address_validation -v &quot;&gt;= 2.0.2, &lt; 3&quot;
+</code></pre>
 
 <p>To install using the command line with high security, run this:</p>
 
 <pre class="code ruby"><code class="ruby">wget http://sixarm.com/sixarm.pem
 gem cert --add sixarm.pem &amp;&amp; gem sources --add http://sixarm.com
-gem install sixarm_ruby_email_address_validation -v &quot;&gt;= 2.0.2, &lt; 3&quot; --trust-policy HighSecurity</code></pre>
+gem install sixarm_ruby_email_address_validation -v &quot;&gt;= 2.0.2, &lt; 3&quot; --trust-policy HighSecurity
+</code></pre>
 
 <p>To require the gem in your code:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sixarm_ruby_email_address_validation</span><span class='tstring_end'>&quot;</span></span>
 </code></pre>
-<!--INSTALL-SHUT-->
-<h2 id="label-Example">Example</h2>
 
-<pre class="code ruby"><code class="ruby">if EmailAddressValidation::Pattern=~&quot;foo@bar.com&quot;
-   ...
-end</code></pre>
+<!--install-shut-->
 
-<h2 id="label-Pattern+Match">Pattern Match</h2>
+<h2>Pattern</h2>
 
-<p>To find an email address in a string, do the pattern match then use the
-result, which is the match&#39;s string position:</p>
+<p>To find an email address, anywhere in a string, use the <code>Pattern</code> constant.</p>
 
-<p>Example of match position:</p>
+<ul>
+<li>If a match is anywhere in the string, then return the character position index.</li>
+<li>If there&#39;s no match, then return nil.</li>
+</ul>
 
-<pre class="code ruby"><code class="ruby">EmailAddressValidation::Pattern=~&#39;foo@bar.com&#39;
+<p>Example:</p>
+
+<pre class="code ruby"><code class="ruby">EmailAddressValidation::Pattern =~ &quot;alice@example.com&quot;
 =&gt; 0
 
-EmailAddressValidation::Pattern=~&#39;... foo@bar.com ...&#39;
+EmailAddressValidation::Pattern =~ &quot;--- alice@example.com ---&quot;
 =&gt; 4
+</code></pre>
 
-EmailAddressValidation::Pattern=~&#39;... hello world ...&#39;
-=&gt; nil</code></pre>
+<h2>Pattern Exact</h2>
 
-<h2 id="label-Pattern+Match+Exact">Pattern Match Exact</h2>
+<p>To find an email address, and ensure that it is the entire string, use the <code>PatternExact</code> constant.</p>
 
-<p>To do a pattern match to the entire string, use the
-EmailAddressValidation::PatternExact.</p>
+<ul>
+<li>If a match is the entire string, then return the character position index, which is always 0.</li>
+<li>Otherwise return nil.</li>
+</ul>
 
-<p>The entire string must be one email address.</p>
+<p>Example:</p>
 
-<p>Example of pattern match:</p>
+<pre class="code ruby"><code class="ruby">EmailAddressValidation::PatternExact =~ &quot;alice@example.com&#39;
+#=&gt; 0
 
-<pre class="code ruby"><code class="ruby">if EmailAddressValidation::PatternExact=~&#39;foo@bar.com&#39;
-#=&gt; truthy
+EmailAddressValidation::PatternExact =~ &quot;--- alice@example.com ---&quot;
+#=&gt; nil
+</code></pre>
 
-if EmailAddressValidation::PatternExact=~&#39;... foo@bar.com ...&#39;
-#=&gt; falsey</code></pre>
+<h2>Examples</h2>
 
-<p>This pattern is especialy useful to validate an email address.</p>
+<p>The patterns are easy to use in your own code.</p>
 
-<p>Example to validate an email address:</p>
+<p>Example of a condition:</p>
 
-<pre class="code ruby"><code class="ruby"><span class='kw'>def</span> <span class='id identifier rubyid_valid?'>valid?</span><span class='lparen'>(</span><span class='id identifier rubyid_email_address'>email_address</span><span class='rparen'>)</span>
-  <span class='const'>EmailAddressValidation</span><span class='op'>::</span><span class='const'>PatternExact</span><span class='op'>=~</span><span class='id identifier rubyid_email_address'>email_address</span> <span class='op'>?</span> <span class='kw'>true</span> <span class='op'>:</span> <span class='kw'>false</span>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>alice@example.com</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>if</span> <span class='const'><span class='object_link'><a href="EmailAddressValidation.html" title="EmailAddressValidation (class)">EmailAddressValidation</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="EmailAddressValidation.html#PatternExact-constant" title="EmailAddressValidation::PatternExact (constant)">PatternExact</a></span></span> <span class='op'>=~</span> <span class='id identifier rubyid_text'>text</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>valid</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>else</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>invalid</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span>
 </code></pre>
 
-<h2 id="label-Rails+Validation+-28optional-29">Rails Validation (optional)</h2>
+<p>Example of a method:</p>
 
-<p>To add email address validation to a typical Ruby On Rails model:</p>
+<pre class="code ruby"><code class="ruby"><span class='kw'>def</span> <span class='id identifier rubyid_valid?'>valid?</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="EmailAddressValidation.html" title="EmailAddressValidation (class)">EmailAddressValidation</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="EmailAddressValidation.html#PatternExact-constant" title="EmailAddressValidation::PatternExact (constant)">PatternExact</a></span></span> <span class='op'>=~</span> <span class='id identifier rubyid_text'>text</span> <span class='op'>?</span> <span class='kw'>true</span> <span class='op'>:</span> <span class='kw'>false</span>
+<span class='kw'>end</span>
+
+<span class='id identifier rubyid_valid?'>valid?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>alice@example.com</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'>#=&gt; true
+</span><span class='id identifier rubyid_valid?'>valid?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>alice</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'>#=&gt; false
+</span></code></pre>
+
+<p>Example of a scan which gets all the email adddresses:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>To alice@example.com and bob@example.org and others</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_text'>text</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="EmailAddressValidation.html" title="EmailAddressValidation (class)">EmailAddressValidation</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="EmailAddressValidation.html#Pattern-constant" title="EmailAddressValidation::Pattern (constant)">Pattern</a></span></span><span class='rparen'>)</span>
+<span class='comment'>#=&gt; [&quot;alice@example.com&quot;, &quot;bob@example.org&quot;]
+</span></code></pre>
+
+<p>Example of a scan which iterates on each email address:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>To alice@example.com and bob@example.org and others</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_text'>text</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="EmailAddressValidation.html" title="EmailAddressValidation (class)">EmailAddressValidation</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="EmailAddressValidation.html#Pattern-constant" title="EmailAddressValidation::Pattern (constant)">Pattern</a></span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_match'>match</span><span class='op'>|</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_match'>match</span>
+<span class='kw'>end</span>
+<span class='comment'>#=&gt;
+</span><span class='id identifier rubyid_alice'>alice</span><span class='ivar'>@example</span><span class='period'>.</span><span class='id identifier rubyid_com'>com</span>
+<span class='id identifier rubyid_bob'>bob</span><span class='ivar'>@example</span><span class='period'>.</span><span class='id identifier rubyid_org'>org</span>
+</code></pre>
+
+<p>Example of a Rails user class:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='kw'>class</span> <span class='const'>User</span>
-  <span class='id identifier rubyid_include'>include</span> <span class='const'>EmailAddressValidation</span>
-  <span class='id identifier rubyid_validates'>validates</span> <span class='symbol'>:email_address</span><span class='comma'>,</span> <span class='symbol'>:format</span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='symbol'>:with</span> <span class='op'>=&gt;</span> <span class='const'>EmailAddressValidation</span><span class='op'>::</span><span class='const'>PatternExact</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="EmailAddressValidation.html" title="EmailAddressValidation (class)">EmailAddressValidation</a></span></span>
+  <span class='id identifier rubyid_validates'>validates</span> <span class='symbol'>:email_address</span><span class='comma'>,</span> <span class='symbol'>:format</span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='symbol'>:with</span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="EmailAddressValidation.html" title="EmailAddressValidation (class)">EmailAddressValidation</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="EmailAddressValidation.html#PatternExact-constant" title="EmailAddressValidation::PatternExact (constant)">PatternExact</a></span></span> <span class='rbrace'>}</span>
 <span class='kw'>end</span>
 </code></pre>
 
-<h2 id="label-Frequently+Asked+Questions">Frequently Asked Questions</h2>
+<h2>Frequently Asked Questions</h2>
 
-<p>Q. Does this handle unusual email addresses, like foo+bar@my.com?</p>
+<p>Q. Does this handle unusual email addresses, like <a href="mailto:foo+bar@my.com">foo+bar@my.com</a>?</p>
 
-<p>A. Yes. It handles all RFC email addresses. If you find an RFC email
-address that fails, please let us know.</p>
+<p>A. Yes. It handles all RFC email addresses. If you find an RFC email address that fails, please let us know.</p>
 
 <p>Q. Why use this in a Rails app?</p>
 
-<p>A. We use it to detect a potential typo during user registration, so we can
-prompt the user to correct it before we send a typical welcome email with a
-registration link. If we didn&#39;t validate the email address format, then
-we would have sent the welcome email to the wrong user, or into the void.</p>
+<p>A. We use it to detect a potential typo during user registration, so we can prompt the user to correct it before we send a typical welcome email with a registration link. If we didn&#39;t validate the email address format, then we would have sent the welcome email to the wrong user, or into the void.</p>
 
 <p>Q. Why use this to get more than one email address?</p>
 
-<p>A. We use it to find typos in large databases of email addresses where
-it&#39;s not a business option to send the user an email. For example,
-proofing an existing report of 10 million users in a CSV file. We need to
-contact anyone with a malformed email address, so we actually call them if
-we have their phone number. We can&#39;t send these people an email,
-because the address is invalid.</p>
+<p>A. We use it to find typos in large databases of email addresses where it&#39;s not a business option to send the user an email. For example, proofing an existing report of 10 million users in a CSV file. We need to contact anyone with a malformed email address, so we actually call them if we have their phone number. We can&#39;t send these people an email, because the address is invalid.</p>
 </div></div>
 
-    <div id="footer">
-  Generated on Sat Jul 18 20:47:50 2015 by
+      <div id="footer">
+  Generated on Fri Jun 22 01:48:23 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.2.2).
+  0.9.14 (ruby-2.5.1).
 </div>
 
+    </div>
   </body>
 </html>
