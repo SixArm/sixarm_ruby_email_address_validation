@@ -4,9 +4,9 @@
 
 [![Gem Version](https://badge.fury.io/rb/sixarm_ruby_email_address_validation.svg)](http://badge.fury.io/rb/sixarm_ruby_email_address_validation)
 [![Build Status](https://travis-ci.org/SixArm/sixarm_ruby_email_address_validation.png)](https://travis-ci.org/SixArm/sixarm_ruby_email_address_validation)
-[![Code Climate Maintainability](https://api.codeclimate.com/v1/badges/b5b279e640b3fcdb881d/maintainability)](https://codeclimate.com/github/SixArm/sixarm_ruby_email_address_validation/maintainability)
+[![Code Climate](https://api.codeclimate.com/v1/badges/b5b279e640b3fcdb881d/maintainability)](https://codeclimate.com/github/SixArm/sixarm_ruby_email_address_validation/maintainability)
 
-* Git: <https://github.com/sixarm/sixarm_ruby_email_address_validation>
+* Git: <https://github.com/SixArm/sixarm_ruby_email_address_validation>
 * Doc: <http://sixarm.com/sixarm_ruby_email_address_validation/doc>
 * Gem: <https://rubygems.org/gems/sixarm_ruby_email_address_validation>
 * Contact: Joel Parker Henderson, <joel@sixarm.com>
@@ -40,23 +40,23 @@ Related links:
 
 ## Install
 
-To install using a Gemfile, add this:
+### Gem
 
-    gem "sixarm_ruby_email_address_validation", ">= 2.0.2", "< 3"
+To install this gem in your shell or terminal:
 
-To install using the command line, run this:
+    gem install sixarm_ruby_email_address_validation
 
-    gem install sixarm_ruby_email_address_validation -v ">= 2.0.2, < 3"
+### Gemfile
 
-To install using the command line with high security, run this:
+To add this gem to your Gemfile:
 
-    wget http://sixarm.com/sixarm.pem
-    gem cert --add sixarm.pem && gem sources --add http://sixarm.com
-    gem install sixarm_ruby_email_address_validation -v ">= 2.0.2, < 3" --trust-policy HighSecurity
+    gem 'sixarm_ruby_email_address_validation'
+
+### Require
 
 To require the gem in your code:
 
-    require "sixarm_ruby_email_address_validation"
+    require 'sixarm_ruby_email_address_validation'
 
 <!--install-shut-->
 
